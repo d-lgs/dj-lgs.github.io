@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <!-- #docregion head -->
+    <!-- #docregion base-href -->
+  <head>
+    <base href="/">
+    <!-- #enddocregion base-href -->
+    <title>Exploring SF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- #enddocregion head -->
+    <!-- #docregion css -->
+    <link rel="stylesheet" href="app/styles/main.css">
+        <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js">
+    <!-- #enddocregion css -->
+    <!-- #docregion head -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <!-- #docregion router -->
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <!-- #enddocregion router -->
+    <script>
+      System.config({packages: {app: {format: 'register', defaultExtension: 'js'}}});
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+
+ 		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="#">Exploring SF</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="#">Dashboard</a></li>
+								<li><a href="/posts">All Posts</a></li>
+
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>Home</h3>
+											<p>Feugiat tempus veroeros dolor</p>
+										</a>
+									</li>
+									<li>
+										<a href="/posts">
+											<h3>Posts</h3>
+											<p>Sed vitae justo condimentum</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+					</section>
+
+
+  <div id="main">
+
+    <my-app>Loading...</my-app>
+
+  </div>
+
+   <!--Sidebar -->
+					<section id="sidebar">
+            	<!-- Intro -->
+							<section id="intro">
+
+								 <header>
+									<h2>Exploring SF</h2>
+									<p>Kiwi takes on the States</p>
+								</header>
+							</section>
+						<!-- Intro -->
+
+						<!-- Mini Posts -->
+							<section>
+								<div class="mini-posts">
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="#">SMALL STEPS WITH BIG FEET</a></h3>
+												<time class="published" datetime="2015-07-17">Saturday, 17th July</time>
+											</header>
+											<a href="#" class="image"><img src="app/images/Bridge.jpg" alt="" /></a>
+										</article>
+
+									<!-- Mini Post -->
+										<!--<article class="mini-post">
+											<header>
+												<h3><a href="#">Rutrum neque accumsan</a></h3>
+												<time class="published" datetime="2015-10-19">October 19, 2015</time>
+											</header>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+										</article>-->
+
+</html>
